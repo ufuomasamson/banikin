@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: banking-app
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: CI_ENVIRONMENT
+        value: production
+      - key: DATABASE_DEFAULT_HOSTNAME
+        sync: false
+      - key: DATABASE_DEFAULT_DATABASE
+        sync: false
+      - key: DATABASE_DEFAULT_USERNAME
+        sync: false
+      - key: DATABASE_DEFAULT_PASSWORD
+        sync: false
+    healthCheckPath: /
+    buildCommand: docker build -t banking-app .
+    startCommand: docker run -p $PORT:80 banking-app 

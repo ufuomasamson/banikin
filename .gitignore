@@ -1,0 +1,48 @@
+# CodeIgniter specific
+writable/cache/*
+!writable/cache/index.html
+writable/logs/*
+!writable/logs/index.html
+writable/session/*
+!writable/session/index.html
+writable/uploads/*
+!writable/uploads/index.html
+writable/debugbar/*
+
+# Environment files
+.env
+.env.development
+.env.production
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Composer dependencies
+vendor/
+
+# Node modules
+node_modules/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Database files
+*.sqlite
+*.db
+
+# Log files
+*.log
+
+# Backup files
+*.bak
+*.backup 
