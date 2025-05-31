@@ -8,7 +8,8 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libxml2-dev \
     zip \
-    unzip
+    unzip \
+    apache2
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -38,4 +39,4 @@ COPY docker/apache.conf /etc/apache2/sites-available/000-default.conf
 EXPOSE 80
 
 # Start Apache
-CMD ["apache2-ctl", "-D", "FOREGROUND"] 
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"] 
